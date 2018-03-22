@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">  
+  
+<hibernate-configuration>  
+  
+    <session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>  
+        <property name="connection.url">jdbc:mysql://localhost:3306/Gardenplanner3</property>  
+        <property name="connection.username">root</property>  
+        <property name="connection.password">labor2006</property>  
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hbmdl.auto">create</property>
+        <property name="show_sql">true</property>
+        <!--property name="hibernate.enable_lazy_load_no_trans">true</property-->
+        <mapping class="dbController.User"></mapping>
+        <mapping class="dbController.Weather"></mapping>
+        <mapping class="dbController.Location"></mapping>
+        <mapping class="dbController.Crops"></mapping>
+        <mapping class="dbController.Beds"></mapping>
+    	<!--  <mapping resource="User.hbm.xml"/>  -->
+    </session-factory>  
+  
+</hibernate-configuration>
